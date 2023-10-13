@@ -1,0 +1,9 @@
+header
+main
+    home
+    about
+    Skills and Experience
+    Portfolio
+    Contact me
+
+footer
