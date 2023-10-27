@@ -37,7 +37,7 @@ var $tagsinput = $('.tagsinput');
   if (isWindows) {
     // if we are on windows OS we activate the perfectScrollbar function
 
-    $('.wrapper .login-page, .register-page, .card').perfectScrollbar();
+    // $('.wrapper .login-page, .register-page, .card').perfectScrollbar();
 
 
     if ($('.tab-content .table-responsive').length != 0) {
@@ -138,18 +138,18 @@ $(document).ready(function() {
 
 
   // Datepicker
-  flatpickr('.flatpickr', {});
+  // flatpickr('.flatpickr', {});
 
   // Datepicker - range
-  flatpickr('.range', {
+  // flatpickr('.range', {
     mode: "range"
-  });
+  // });
 
   // DateTimePicker
-  flatpickr('.datetimepicker', {
-    enableTime: true,
-    dateFormat: "Y-m-d H:i",
-  });
+  //flatpickr('.datetimepicker', {
+  //  enableTime: true,
+  //  dateFormat: "Y-m-d H:i",
+  //});
 
   // Activate Sliders
   ArgonKit.initSliders();

@@ -1,0 +1,488 @@
+/*
+font-family: 'Maven Pro', sans-serif;
+font-family: 'Poppins', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Roboto Mono', monospace; 
+*/
+
+/* ------------ VARIABLES -------------------------------- */
+:root {
+    --header-height:3rem;
+    /* -------- Colors ------- */
+    --first-color: hsl(250,70%,60%);
+    --first-color-second: hsl(250,71%,47%);
+    --first-color-alt: hsl(250,55%,50%);
+    --first-color-lighter: hsl(250,90%,82%);
+
+    --title-color: hsl(250,10%,15%);
+    --text-color:hsl(250,10%,40%);
+    --mainText:hsl(250,10%,20%);
+    --text-color-light: hsl(250,10%,65%);
+    --input-color: hsl(250,70%,88%);
+    --body-color:hsl(250,66%,99%); 
+    --container-color: #fff;
+    --scroll-bar-color: hsl(250,15%,85%);
+    --scroll-thumb-color: hsl(250,15%,70%);
+
+    /*------------- FONT and TYPOGRAPHY */
+    --gullible-font: 'Maven Pro', sans-serif;
+    --body-font: 'Poppins', sans-serif;
+    --roboto-font: 'Roboto', sans-serif;
+    --robotomono-font: 'Roboto Mono', monospace;
+    --bigfat-font: 'Russo one', sans-serif;
+
+    /* 1 rem:16 px, 0.5 rem: 8 px */
+    --big-font-size: 2rem;
+    --h1-font-size:1.5rem;
+    --h2-font-size:1.25rem;
+    --h3-font-size:1.125rem;
+    --normal-font-size:14px;
+    --small-font-size:0.813rem;
+    --smaller-font-size:0.75rem;
+
+    /* --- FONT-WEIGHT---- */
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    /* -- Margin Size bottom--- */
+    --mb-0-25:0.25rem;
+    --mb-0-50:0.50rem;
+    --mb-0-75:0.75rem;
+    --mb-1-00:1.00rem;
+    --mb-1-25:1.25rem;
+    --mb-1-50:1.50rem;
+    --mb-1-75:1.75rem;
+    --mb-2-00:2.00rem;
+    --mb-2-50:2.50rem;
+    --mb-3-00:3.00rem;
+
+    /*-- Z-Index ------ */
+    --z-tooltip:10;
+    --z-fixed:100;
+    --z-modal:1000;
+}
+    /* FONT SIZE for larger devices */
+@media screen and (min-width:968px) {
+    :root {
+        --big-font-size: 3rem;
+        --h1-font-size:2.5rem;
+        --h2-font-size:1.5rem;
+        --h3-font-size:1.25rem;
+        --normal-font-size:16px;
+        --small-font-size:0.875rem;
+        --smaller-font-size:0.813rem;
+    }
+
+}
+
+
+    /*  -------- Variables for Dark Theme ---------- */
+body.dark-theme{
+    --first-color: hsl(250,70%,60%);
+    --first-color-second: hsl(250,30%,8%);
+    --first-color-alt: hsl(250,55%,50%);
+    --first-color-lighter: hsl(250,90%,82%);
+
+    --title-color: hsl(250,10%,95%);
+    --text-color:hsl(250,10%,75%);
+    --mainText:hsl(250,10%,75%);
+    --text-color-light: hsl(250,10%,65%);
+    --input-color: hsl(250,29%,16%);
+    --body-color:hsl(250,30%,14%); 
+    --container-color: hsl(250,30%,16%); ;
+    --scroll-bar-color: hsl(250,10%,15%);
+    --scroll-thumb-color: hsl(250,15%,32%);
+    
+}
+.nav__btns {
+    display:flex;
+    align-items: center;
+    padding-left: var(--mb-0-50);
+    margin: 0;
+    margin-top:-5px;
+    gap: var(--mb-0-75);
+}
+.change-theme {
+    font-size: 1.25rem;
+    color:var(--title-color);
+    margin-right: var(--mb-1-00);
+    cursor: pointer;
+}
+.change-theme:hover{
+    color:var(--first-color);
+
+}
+/* --- BASE  ---- */
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0 0 var(--header-height) 0;
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    background-color: var(--body-color);
+}
+
+h1,h2,h3,h4 {
+    color: var(--title-color);
+    font-weight: var(--font-semi-bold);
+}
+
+ul {
+    list-style: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ------------- Reusable CSS classes --------------------------------*/
+.section{
+    padding: 2rem 0 4rem;
+    margin: auto;
+    min-height: 80vh;
+}
+.section-title {
+    font-size: var(--big-font-size);
+    margin-bottom: var(--gullible-font);
+}
+
+.section-subtitle {
+    display: block;
+    font-size: var(--small-font-size);
+    margin-bottom: var(--mb-3-00);
+    color: var(--text-color);
+}
+
+.section-title,
+.section-subtitle {
+    text-align: center;
+}
+
+/* ========================= BUTTONS STYLING =====================  */
+.button{
+    display: inline-block;
+    background-color: var(--first-color);
+    color: #FFF;
+    padding: 1rem;
+    border-radius: .5rem;
+    font-weight: var(--font-medium);
+}
+
+.button:hover{
+    background-color: var(--first-color-alt);
+    color: #FFF;
+}
+
+.button__icon{
+    font-size: 1.25rem;
+    margin-left: var(--mb-0-5);
+    transition: .3s;
+}
+
+.button--flex{
+    display: inline-flex;
+    align-items: center;
+}
+
+.button--white{
+    background-color: #FFF;
+    color: var(--first-color);
+}
+
+.button--white:hover{
+    background-color: var(--first-color-lighter);
+}
+
+
+/* ------- LAYOUT ---------*/
+.container{
+    margin-right: var(--mb-1-00);
+}
+
+.grid {
+    display: grid;
+}
+
+.header{
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right:0;
+    z-index: var(--z-fixed);
+    background-color: var(--body-color);
+    margin-right: var(--mb-0-25);
+}
+
+/* --------- NAV Styling ---------- */
+.nav{
+    max-width: 968px;
+    height:var(--header-height);
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-left:var(--mb-0-50);
+    margin-right: var(--mb-0-50);
+}
+
+.nav__logo,
+.nav__toggle {
+    color:var(--title-color);
+    font-weight: var(--font-medium);
+}
+
+.nav__logo:hover {
+    color: var(--first-color);
+
+}
+
+.nav__toggle {
+    font-size: var(--h3-font-size);
+    cursor: pointer;
+    margin-right: 2rem;
+
+}
+
+.nav__toggle:hover {
+    color: var(--first-color);
+}
+
+.navbar_brand {
+    font-family: var(--robotomono-font);
+}
+
+@media screen and (max-width: 768px) {
+    .nav__menu {
+        position: fixed;
+        bottom: -100%;
+        right: 0;
+        left:0;
+        width: 100%;
+        background-color: var(--body-color);
+        padding: 2rem 1.5rem 4rem;
+        box-shadow: 0 -1 4px rgba(0,0,0, 0.15);
+        border-radius:1.5rem 1.5rem 0 0;
+        transition: 0.5s;
+    }
+ }
+
+ .nav__list {
+    grid-template-columns: repeat(3,1fr);
+    gap:2rem;
+ }
+
+ .nav__link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+ }
+
+ .nav__link:hover {
+    color: var(--first-color);
+ }
+
+ .nav__icon {
+    font-size: 1.2rem;
+ }
+
+ .nav__close {
+    position: absolute;
+    right:1.3rem;
+    bottom: 0.5rem;
+    font-size: 1.5rem;
+    cursor: pointer;
+    color: var(--first-color);
+ }
+
+ .nav__close:hover {
+    color: var(--first-color-alt);
+ }
+
+ .show-menu {
+    bottom: 0;
+ }
+
+ .active-link {
+    color: var(--first-color);
+ }
+
+ .scroll-header {
+    box-shadow: 0 -1px 4px rgba(0,0,0, 0.15);
+ }
+    
+/* --------- Home ---------- */
+.home{
+    height: 70vh;
+    align-content: space-between;
+    margin-top: var(--mb-3-00);
+    padding-bottom: 0;
+    margin-bottom: var(--mb-2-00);
+}
+
+.home__container{
+    display:flex;
+    gap: 1.75rem;
+    padding-left:0;
+    margin-left:var(--mb-1-00);
+    justify-content: space-around;
+    align-items: center;
+}
+
+.home__content {
+    /*display: grid;*/
+    flex: 1;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: 'home__social home__content';
+    /*padding-top: var(--mb-2-50);*/
+    align-items:top;
+    height:max-content;
+    align-content: space-between;
+    margin-right: var(--mb-0-25);
+    margin-left: 0;
+ }
+
+ .home__social {
+    /*display: flex;*/
+    grid-area:home_social; 
+    grid-template-columns: max-content;
+    row-gap: 1rem;
+    column-gap: 0;
+    padding-top: 0rem;
+    margin:0;
+    float:right;
+}
+
+ 
+.home__social-icon {
+    font-size:1.25rem;
+    color: var(--first-color);
+}
+
+.home__social-icon:hover {
+    color:var(--first-color-alt);
+}
+
+.home__social::after{
+    clear:both;
+}
+
+.home__data {
+    grid-area:home__content;
+    align-content: center;
+    text-align: center; 
+}
+.home__welcome {
+    text-align: center;
+    font-size: var(--smaller-font-size);
+    color:var(--text-color);
+    padding:1.5rem;
+}
+.home__title {
+    text-align: center;
+    font-size: var(--big-font-size);
+    color:var(--text-color);
+    padding-bottom: 1.5rem;
+    margin-top: var(--mb-1-50);
+}
+
+#typewriter {
+    margin: var(--mb-1-00);
+    margin-bottom: var(--mb-2-00);
+    color: var(--text-color);
+    font-family: var(--robotomono-font);
+    font-size: var(--h2-font-size);
+}
+
+.Typewriter__wrapper {
+    text-align: center;
+    font-size: var(--h2-font-size);
+    font-family: var(--robotomono-font);
+    font-weight: var(--font-medium);
+    color: var(--mainText);
+}
+.Typewriter__cursor {
+    font-size: var(--h1-font-size);
+    color: var(--text-color);
+    font-family: var(--bigfat-font);
+    font-weight: 600;
+}
+
+.home__subtitle{
+    text-align: center;
+    font-size: var(--h3-font-size);
+    color: var(--text-color);
+    font-weight: var(--font-medium);
+    margin-bottom: var(--mb-1);
+    padding: 1rem 1.5rem 1rem 1.5rem;
+}   
+
+/* SCROLL DOWN */
+@keyframes scrollDown {
+    0%{
+        margin-top: 14px;
+        opacity: 0;
+    }
+    15%{
+        margin-top: 14px;
+        opacity: 1;
+    }
+    30%{
+        margin-top: 14px;
+        opacity: 1;
+    }
+    50%{
+        margin-top: 30px;
+        opacity: 1;
+    }
+    100%{
+        margin-top: 30px;
+        opacity: 0;
+    }
+}
+
+.home__scroll{
+    display: flex;
+    justify-content: center;
+    margin-top: var(--mb-1-00);
+    animation: scrollDown 3s infinite;
+}
+
+.home__scroll-button{
+    color: var(--first-color);
+    transition: .5s;
+}
+.home__scroll-button:hover{
+    color: var(--first-color-alt);
+    transform:translateY(00.25rem);
+}
+.home__scroll-mouse{
+    font-size: var(--big-font-size);
+}
+.home__scroll-name{
+    font-size: var(--small-font-size);
+    color: var(--title-color);
+    font-weight: var(--font-medium);
+    margin: var(--mb-0-25);
+}
+.home__scroll-arrow{
+    font-size: var(--h1-font-size);
+}
+
